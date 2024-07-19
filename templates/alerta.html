@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Besley:wght@900&family=IBM+Plex+Sans+Thai:wght@100&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Bolivariano - APP Bloqueo de IPs sospechosas</title>
+  </head>
+
+  <style>
+    body {
+      font-family: 'IBM Plex Sans Thai', serif;
+      font-size: 14px;
+    }
+  </style>
+
+  <body>
+    <div class="top-heading">
+      <h2>
+        <img src="{{url_for('static', filename='logo.png')}}" > 
+        <br>
+        <h1>APP Bloqueo de IPs sospechosas</h1>
+      </h2>
+    </div>
+
+    <div class='outer'>      
+      La URL de /predict no se accede directamente. Ve a la pagina principal.
+      <a href="/" >Inicio</a> 
+      <br>
+      <p>
+        <b>Author: </b>Roberto Teran-Marin<br>
+      </p>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Besley:wght@900&family=IBM+Plex+Sans+Thai:wght@100&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <title>Bolivariano - APP Bloqueo de IPs sospechosas</title>
+  </head>
+
+  <style>
+    body {
+      font-family: 'IBM Plex Sans Thai', serif;
+      font-size: 14px;
+    }
+  </style>
+
+  <body>
+    <div class="top-heading">
+      <h2>
+        <img src="{{url_for('static', filename='logo.png')}}" > 
+        <br>
+        <h1>APP Bloqueo de IPs sospechosas</h1>
+      </h2>
+    </div>
+
+    <div class='outer'>
+      <div class='inner'>
+        <p>Add Suspicious IP Address. 
+          No agregar IPs con esapcios, comas ; o punto y comas. Se puede agregar IPs con saltos.
+        </p>
+
+        <form action='/predict' method='POST'>
+          <div class='input_area'>            
+            <textarea id="feat_01" name="feature_01" rows="4" cols="40"></textarea> 
+          </div>
+      </div>
+
+      <div style="width:700px;" id="container">
+        <div>
+          <button type="submit" class="btn" onClick="window.location.href='/predict'">
+            Agregar IPs
+          </button>
+        </div>
+      </div>
+
+      <p>
+        Author: Roberto Teran-Marin<br>
+      </p>
+
+    </div>
+  </body>
+</html>
